@@ -1,6 +1,6 @@
 # Attraction Complex Site
 
-[Посетить сайт](https://glekomtsev.github.io/complex-attraction/git add .)
+[Посетить сайт](https://glekomtsev.github.io/complex-attraction/)
 
 ## Используемые технологии
 
