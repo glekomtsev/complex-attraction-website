@@ -1,0 +1,247 @@
+.main {
+  height: 100vh;
+  position: relative;
+}
+.main__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* Цвет текста */
+  font-size: 2em; /* Размер шрифта */
+  font-weight: bold; /* Жирность шрифта */
+  z-index: 10; /* Убедитесь, что заголовок поверх слайдера */
+  text-align: center;
+}
+
+.main__info::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* Центрирование по вертикали */
+  left: 50%; /* Центрирование по горизонтали */
+  width: 900px; /* Ширина круга */
+  height: 900px; /* Высота круга */
+  background: rgba(255, 255, 255); /* Полупрозрачный белый цвет */
+  filter: blur(200px); /* Размытие */
+  transform: translate(-50%, -50%); /* Смещение в центр родительского блока */
+  z-index: -1; /* Отправляем круг на задний план */
+  border-radius: 50%; /* Превращаем прямоугольник в круг */
+
+  @include size-960 {
+    width: 400px;
+    // height: 400px;
+    // filter: blur(100px)
+  }
+  @include size-640 {
+    width: 300px;
+    // height: 300px;
+    // filter: blur(50px)
+  }
+}
+
+.main__title {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+  overflow: hidden; /* Скрываем текст, который выходит за пределы контейнера */
+  white-space: nowrap; /* Текст не переносится на новую строку */
+
+  span {
+    display: inline-block; /* Чтобы каждая буква могла иметь собственные анимации */
+    transform: translateX(
+      -300%
+    ); /* Начальное положение: буквы сдвинуты вправо */
+    opacity: 0; /* Начальная непрозрачность букв */
+    animation: slideInOut 7s ease-in-out infinite; /* Анимация для каждой буквы */
+
+    /* Применяем анимацию к каждой букве с задержкой */
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+    &:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(7) {
+      animation-delay: 0.7s;
+    }
+    &:nth-child(8) {
+      animation-delay: 0.8s;
+    }
+    &:nth-child(9) {
+      animation-delay: 0.9s;
+    }
+    &:nth-child(10) {
+      animation-delay: 1s;
+    }
+  }
+
+  /* Эффект для анимации букв */
+  @keyframes slideInOut {
+    0% {
+      transform: translateX(-300%);
+      opacity: 0;
+    }
+    15% {
+      transform: translateX(0);
+    }
+    20% {
+      opacity: 1;
+    }
+    85% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    95% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(300%);
+      opacity: 0;
+    }
+  }
+
+  @include size-1280 {
+    font-size: 50px;
+  }
+  @include size-640 {
+    font-size: 38px;
+    font-weight: 700;
+  }
+  @include size-480 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+}
+
+.main__subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  color: #000;
+  margin-bottom: 40px;
+
+  @include size-1280 {
+    font-size: 24px;
+  }
+
+  @include size-640 {
+    font-size: 16px;
+  }
+}
+.main__btn {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 26px 84px;
+  z-index: 20;
+  margin-bottom: 20px;
+
+  @include size-640 {
+    padding: 24px 38px;
+  }
+  @include size-480 {
+    padding: 14px 32px;
+    font-size: 22px
+  }
+}
+.main__text {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000;
+  p {
+    display: inline-block;
+    padding: 6px 25px;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  @include size-640 {
+    font-size: 10px;
+    p {
+      padding: 3px 14px;
+    }
+  }
+}
+
+.swiper-main {
+  height: 100%;
+  width: 100%;
+}
+.swiper-main {
+  position: relative;
+  .swiper-button-prev,
+  .swiper-button-next {
+    transition: all 0.2s ease-in;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    margin: 0 25px; // Отступы от краев, можно задать свои значения
+
+    &::after {
+      display: none;
+    }
+    @include size-960 {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    background-image: url("./../../img/main/prev-icon-default.svg");
+
+    &:hover {
+      background-image: url("./../../img/main/prev-icon-hover.svg");
+    }
+  }
+
+  .swiper-button-next {
+    background-image: url("./../../img/main/next-icon-default.svg");
+
+    &:hover {
+      background-image: url("./../../img/main/next-icon-hover.svg");
+    }
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1.2); /* Увеличенное изображение */
+  }
+  100% {
+    transform: scale(1); /* Обычный размер изображения */
+  }
+}
+
+.swiper-main .swiper-slide {
+  height: 100%;
+  background-color: #999;
+  background-position: center center; /* x y */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-main .swiper-slide-active {
+  // animation: zoomInOut 5s ease-in-out;
+}

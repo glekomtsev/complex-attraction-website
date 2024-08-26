@@ -1,0 +1,121 @@
+.header {
+  position: absolute; /* или absolute, в зависимости от ваших требований */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* значение z-index должно быть выше, чем у слайдера */
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.container {
+}
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 43px 0 215px;
+
+  @include size-960 {
+    padding: 28px 0 100px;
+  }
+}
+.header__logo {
+}
+.header__nav {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+
+  @include size-1440 {
+    display: none;
+  }
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+.header__link {
+  a {
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    p {
+      transition: box-shadow 0.2s ease-in;
+    }
+
+    &:hover {
+      p {
+        box-shadow: inset 0 -2px 0 0 #08bbb7;
+      }
+    }
+  }
+}
+.header__phone {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  color: #000;
+  a {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  img {
+    animation: shake-pulse 1.5s infinite;
+  }
+  /* Объединённая анимация тряски и пульсации */
+  @keyframes shake-pulse {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    12.5% {
+      transform: scale(1.3) rotate(15deg);
+    }
+    25% {
+      transform: scale(1.3) rotate(-15deg);
+    }
+    37.5% {
+      transform: scale(1.3) rotate(15deg);
+    }
+    50% {
+      transform: scale(1.3) rotate(-15deg);
+    }
+    62.5% {
+      transform: scale(1.3) rotate(15deg);
+    }
+    75% {
+      transform: scale(1.3) rotate(-15deg);
+    }
+    87.5% {
+      transform: scale(1.3) rotate(15deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  @include size-640 {
+    p {
+      display: none;
+    }
+  }
+  @include size-480 {
+    display: none;
+  }
+}
+
+.header__menu-mobile {
+  display: none;
+
+  @include size-1440 {
+    display: block;
+    height: 70px;
+    width: 70px;
+  }
+}

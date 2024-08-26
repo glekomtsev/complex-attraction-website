@@ -1,0 +1,210 @@
+.gallery {
+  padding: 50px 0;
+
+  @include size-780 {
+    padding: 30px 0;
+  }
+  @include size-480 {
+    padding: 18px 0;
+  }
+}
+.container {
+}
+.gallery__container {
+}
+.gallery__title {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #262626;
+
+  margin-bottom: 40px;
+  margin-left: 10%;
+
+  @include size-1080 {
+    font-size: 38px;
+  }
+  @include size-780 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  @include size-360 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+.gallery__btns {
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 40px;
+  @include size-780 {
+    margin-bottom: 20px;
+  }
+  @include size-640 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-right: 10%;
+  }
+
+  @include size-360 {
+    margin-bottom: 10px;
+  }
+}
+.gallery__btn {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: rgba(0, 0, 0, 0.5);
+
+  padding: 10px 59px;
+  border-radius: 40px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  transition: all 0.1s ease-in;
+
+  &--active {
+    border: 2px solid #0fb8b4;
+    color: #000;
+  }
+
+  &:hover {
+    background-color: #0fb8b4;
+    color: #fff;
+    border: 2px solid #0fb8b4;
+  }
+
+  @include size-1080 {
+    padding: 7px 39px;
+    font-size: 14px;
+  }
+  @include size-780 {
+    padding: 5px 24px;
+    font-size: 12px;
+  }
+  @include size-480 {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+.gallery__swiper {
+  width: 100%;
+  height: calc(100vw * 3 / 8);
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  @include size-960 {
+    height: calc(100vw * 9 / 16);
+  }
+}
+
+.swiper-gallery {
+  height: 100%;
+  width: 100%;
+
+  .swiper-slide {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;    
+  }
+  
+}
+
+.swiper-gallery {
+  .swiper-pagination {
+    border-radius: 30px 30px 0 0;
+    width: 160px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000;
+    background: #fff;
+    line-height: 40px;
+
+    .swiper-pagination-current {
+      font-weight: 700;
+    }
+
+    @include size-1280 {
+      font-size: 26px;
+      height: 30px;
+      line-height: 30px;
+      width: 120px;
+    }
+
+    @include size-780 {
+      font-size: 20px;
+      height: 24px;
+      line-height: 24px;
+      width: 110px;
+    }
+
+    @include size-480 {
+      font-size: 14px;
+      height: 16px;
+      line-height: 110%;
+      width: 80px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: var(--swiper-navigation-top-offset, 50%);
+    transform: translateY(-50%);
+
+    transition: all 0.2s ease-in; //плавность анимации
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 42px; //размер иконок
+    height: 42px;
+    margin: 0 25px; // отступы от краев
+
+    &::after {
+      display: none; //отключение старых иконок
+    }
+
+    @include size-1080 {
+      width: 36px;
+      height: 36px;
+    }
+    @include size-640 {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+    }
+    @include size-480 {
+      width: 25px;
+      height: 25px;
+      margin: 0 5px;
+    }
+  }
+
+  .swiper-button-prev {
+    background-image: url("./../../img/main/prev-icon-default.svg");
+
+    &:hover {
+      background-image: url("./../../img/main/prev-icon-hover.svg");
+    }
+  }
+
+  .swiper-button-next {
+    background-image: url("./../../img/main/next-icon-default.svg");
+
+    &:hover {
+      background-image: url("./../../img/main/next-icon-hover.svg");
+    }
+  }
+}
