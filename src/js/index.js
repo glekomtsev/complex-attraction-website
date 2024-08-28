@@ -42,4 +42,21 @@ document.addEventListener("DOMContentLoaded", function() {
       button.classList.add("gallery__btn--active");
     });
   });
+
+  //map
+  const buttonsMap = document.querySelectorAll(".place__btn");
+  const maps = document.querySelectorAll(".place__map");
+
+  buttonsMap.forEach((button) => {
+    button.addEventListener("click", function() {
+      // Удаляем активные классы у всех кнопок и свиперов
+      buttonsMap.forEach((btn) => btn.classList.remove("place__btn--active"));
+      maps.forEach((maps) => maps.classList.remove("place__map--active"));
+
+      // Добавляем активные классы только к нажатой кнопке и соответствующему свиперу
+      const targetId = button.id.replace("place__btn-", "place__map-");
+      document.getElementById(targetId).classList.add("place__map--active");
+      button.classList.add("place__btn--active");
+    });
+  });
 });
