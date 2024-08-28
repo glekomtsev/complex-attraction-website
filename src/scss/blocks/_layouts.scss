@@ -1,0 +1,181 @@
+.layouts {
+}
+.layouts__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 60px;
+
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  padding: 80px 15px 130px;
+
+  @include size-960 {
+    padding: 50px 0 70px;
+  }
+
+  @include size-780 {
+    row-gap: 20px;
+  }
+  @include size-640 {
+    padding: 20px 0 40px;
+  }
+}
+.layouts__title {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #262626;
+  text-align: center;
+
+  @include size-1080 {
+    font-size: 38px;
+  }
+  @include size-780 {
+    font-size: 28px;
+  }
+  @include size-360 {
+    font-size: 20px;
+  }
+}
+.layouts__swiper {
+  width: 100%;
+}
+.swiper-layouts {
+  height: 100%;
+  width: 100%;
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: var(--swiper-navigation-top-offset, 50%);
+    transform: translateY(-50%);
+
+    transition: all 0.2s ease-in; //плавность анимации
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 42px; //размер иконок
+    height: 42px;
+    margin: 0 25px; // отступы от краев
+
+    &::after {
+      display: none; //отключение старых иконок
+    }
+    @include size-1080 {
+      width: 36px;
+      height: 36px;
+    }
+    @include size-640 {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      margin: 0 10px;
+    }
+    @include size-480 {
+      width: 25px;
+      height: 25px;
+      margin: 0 5px;
+    }
+  }
+
+  .swiper-button-prev {
+    background-image: url("./../../img/main/prev-icon-default.svg");
+
+    &:hover {
+      background-image: url("./../../img/main/prev-icon-hover.svg");
+    }
+  }
+
+  .swiper-button-next {
+    background-image: url("./../../img/main/next-icon-default.svg");
+
+    &:hover {
+      background-image: url("./../../img/main/next-icon-hover.svg");
+    }
+  }
+
+  .swiper-slide {
+    min-height: 450px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .swiper-layouts__title-slide {
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      text-align: center;
+      color: #262626;
+      margin-bottom: 10px;
+      span {
+        color: #08bbb7;
+      }
+      @include size-960 {
+        font-size: 20px;
+      }
+      @include size-640 {
+        font-size: 16px;
+      }
+    }
+
+    .swiper-layouts__desc-slide {
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #262626;
+      @include size-960 {
+        font-size: 16px;
+      }
+      @include size-640 {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.swiper-layouts__img {
+  max-width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //   @include size-480 {
+  //     height: 280px;
+  //     width: 280px;
+  //   }
+}
+.layouts__btn {
+  padding: 26px 130px;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+
+  @include size-1440 {
+    padding: 25px 45px;
+  }
+  @include size-1280 {
+    padding: 20px 34px;
+    font-size: 18px;
+  }
+  @include size-960 {
+    padding: 16px 30px;
+    font-size: 16px;
+  }
+
+  @include size-480 {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  @include size-360 {
+    font-size: 12px;
+  }
+}

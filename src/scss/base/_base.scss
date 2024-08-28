@@ -49,6 +49,7 @@ pre.code {
 	border-radius: 40px;
 	font-family: "Didact Gothic", sans-serif;
 	transition: all 0.2s ease-in;
+	cursor: pointer;
 
 	&:hover {
         // background: #37d3d0; /* Изменение фона при наведении */
@@ -71,8 +72,8 @@ pre.code {
 
     &:hover::before {
         opacity: 0; /* Показываем границу при наведении */		
-    }
-	
+    }	
 }
+
 
 

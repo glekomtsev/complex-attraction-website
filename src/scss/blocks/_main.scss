@@ -1,6 +1,7 @@
 .main {
   height: 100vh;
   position: relative;
+  
 }
 .main__info {
   position: absolute;
@@ -160,7 +161,7 @@
   }
   @include size-480 {
     padding: 14px 32px;
-    font-size: 22px
+    font-size: 22px;
   }
 }
 .main__text {
@@ -240,6 +241,7 @@
   background-position: center center; /* x y */
   background-size: cover;
   background-repeat: no-repeat;
+  
 }
 
 .swiper-main .swiper-slide-active {

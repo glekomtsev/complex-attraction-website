@@ -39,6 +39,36 @@ function swiper() {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  const swiper_layouts = new Swiper(".swiper-layouts", {
+    // Optional parameters
+    centeredSlides: true,
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 160,
+      },
+      960: {
+        slidesPerView: 3,
+        spaceBetween: 60,
+      },
+      780: {
+        slidesPerView: 1,
+        spaceBetween: 60,
+      },
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 60,
+      },
+    },
+  });
 }
 
 export default swiper;
