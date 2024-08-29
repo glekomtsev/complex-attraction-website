@@ -14,6 +14,9 @@ mobileNav();
 import swiper from "./modules/swiper.js";
 swiper();
 
+//Inputmask
+import Inputmask from "inputmask";
+
 document.addEventListener("DOMContentLoaded", function() {
   //title main
   const title = document.querySelector(".main__title");
@@ -61,31 +64,54 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   //purchase
+  const phoneInput = document.getElementById("phone");
+
+  // Создайте экземпляр Inputmask с нужным шаблоном
+  const mask = new Inputmask("+7 (999) 99-99-999");
+
+  // Примените маску к полю ввода
+  mask.mask(phoneInput);
+
   const buttonsPur = document.querySelectorAll(".purchase__btn");
   const titles = document.querySelectorAll(".purchase__text-title");
   const desc = document.querySelectorAll(".purchase__text-desc");
+  const img = document.querySelectorAll(".purchase__img");
 
   buttonsPur.forEach((button) => {
     button.addEventListener("click", function() {
-      // Удаляем активные классы у всех кнопок и свиперов
+      // Удаляем активные классы у всех кнопок и элементов
       buttonsPur.forEach((btn) =>
         btn.classList.remove("purchase__btn--active")
       );
-      titles.forEach((titles) =>
-        titles.classList.remove("purchase__text-title--active")
+      titles.forEach((title) =>
+        title.classList.remove("purchase__text-title--active")
       );
-      desc.forEach((desc) =>
-        desc.classList.remove("purchase__text-desc--active")
+      desc.forEach((description) =>
+        description.classList.remove("purchase__text-desc--active")
+      );
+      img.forEach((description) =>
+        description.classList.remove("purchase__img--active")
       );
 
-      // Добавляем активные классы только к нажатой кнопке и соответствующему свиперу
-      const targetId = button.id.replace(
+      // Получаем ID для заголовка и описания
+      const titleId = button.id.replace(
         "purchase__btn-",
         "purchase__text-title-"
       );
+      const descId = button.id.replace(
+        "purchase__btn-",
+        "purchase__text-desc-"
+      );
+      const imgId = button.id.replace("purchase__btn-", "purchase__img-");
+
+      // Добавляем активные классы к соответствующим элементам
       document
-        .getElementById(targetId)
+        .getElementById(titleId)
         .classList.add("purchase__text-title--active");
+      document
+        .getElementById(descId)
+        .classList.add("purchase__text-desc--active");
+      document.getElementById(imgId).classList.add("purchase__img--active");
       button.classList.add("purchase__btn--active");
     });
   });
