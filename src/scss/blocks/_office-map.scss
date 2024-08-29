@@ -1,0 +1,201 @@
+.office-map {
+  position: relative;
+  @include size-1440 {
+    iframe {
+      height: 500px;
+    }
+  }
+  @include size-1280 {
+    iframe {
+      height: 400px; /* Уменьшаем высоту */
+    }
+  }
+  @include size-640 {
+    iframe {
+      height: 300px; /* Уменьшаем высоту */
+    }
+  }
+}
+.offce_map__desc {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+
+  padding: 60px 80px;
+  background-color: #fff;
+  border-radius: 10px;
+
+  @include size-1840 {
+    padding: 40px 60px;
+  }
+
+  @include size-1680 {
+    padding: 30px 40px;
+  }
+
+  @include size-1280 {
+    position: static; /* Измените position на static */
+    top: auto; /* Сбросьте значение top */
+    left: auto; /* Сбросьте значение left */
+    transform: none; /* Сбросьте трансформацию */
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 20px;
+    padding: 10px 15px;
+  }
+
+  @include size-640 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.offce_map__title {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+
+  margin-bottom: 40px;
+
+  @include size-1840 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  @include size-1440 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  @include size-640 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+.offce_map__number {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #000;
+
+  margin-bottom: 10px;
+
+  @include size-1840 {
+    font-size: 26px;
+  }
+  @include size-1440 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  @include size-640 {
+    font-size: 18px;
+  }
+}
+.offce_map__note {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+
+  margin-bottom: 40px;
+
+  @include size-1440 {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+}
+.offce_map__item {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 40px;
+
+  span {
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  @include size-1840 {
+    font-size: 16px;
+  }
+  @include size-1440 {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+.offce_map__social-desc {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+
+  margin-bottom: 10px;
+}
+.offce_map__social {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  @include size-1440 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include size-1280 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include size-640 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.office_map__link {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+
+  padding: 12px 18px;
+  border-radius: 20px;
+  background-color: var(--accent);
+
+  transition: all 0.2s ease-in;
+
+  @include size-1440 {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+.office_map__link--vk {
+  background: #07f;
+  &:hover {
+    background: rgb(60, 151, 255);
+  }
+}
+.office_map__link--youtube {
+  background: #c4302b;
+  &:hover {
+    background: #e66661;
+  }
+}
+.office_map__link--tg {
+  background: #2aabee;
+  &:hover {
+    background: #5ec7ff;
+  }
+}
+.office_map__link--ok {
+  background: #ee8208;
+  &:hover {
+    background: #ffa844;
+  }
+}
