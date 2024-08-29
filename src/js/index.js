@@ -59,4 +59,34 @@ document.addEventListener("DOMContentLoaded", function() {
       button.classList.add("place__btn--active");
     });
   });
-});
+
+  //purchase
+  const buttonsPur = document.querySelectorAll(".purchase__btn");
+  const titles = document.querySelectorAll(".purchase__text-title");
+  const desc = document.querySelectorAll(".purchase__text-desc");
+
+  buttonsPur.forEach((button) => {
+    button.addEventListener("click", function() {
+      // Удаляем активные классы у всех кнопок и свиперов
+      buttonsPur.forEach((btn) =>
+        btn.classList.remove("purchase__btn--active")
+      );
+      titles.forEach((titles) =>
+        titles.classList.remove("purchase__text-title--active")
+      );
+      desc.forEach((desc) =>
+        desc.classList.remove("purchase__text-desc--active")
+      );
+
+      // Добавляем активные классы только к нажатой кнопке и соответствующему свиперу
+      const targetId = button.id.replace(
+        "purchase__btn-",
+        "purchase__text-title-"
+      );
+      document
+        .getElementById(targetId)
+        .classList.add("purchase__text-title--active");
+      button.classList.add("purchase__btn--active");
+    });
+  });
+}); // Закрывающая скобка для функции DOMContentLoaded

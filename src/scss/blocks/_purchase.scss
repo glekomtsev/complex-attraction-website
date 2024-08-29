@@ -1,0 +1,108 @@
+.purchase {
+  padding: 50px 0;
+}
+.purchase__container {
+}
+.purchase__title {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+
+  margin-bottom: 65px;
+}
+.purchase__btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.purchase__btn {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: rgba(0, 0, 0, 0.5);
+
+  padding: 20px 103px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    border-bottom: 4px solid var(--accent);
+    color: #000;
+    font-weight: 400;
+  }
+}
+.purchase__btn--active {
+  border-bottom: 4px solid var(--accent);
+  color: var(--accent);
+}
+.purchase__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+}
+.purchase__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 760px;
+}
+.purchase__text-title {
+  display: none;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #08bbb7;
+  margin-bottom: 30px;
+
+  &--active {
+    display: block;
+  }
+}
+.purchase__text-desc {
+  display: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 30px;
+
+  &--active {
+    display: block;
+  }
+}
+.purchase__text-input {
+}
+.purchase__text-btn {
+  padding: 27px 260px;
+
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+
+  margin-bottom: 20px;
+}
+.purchase__text-note {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.25);
+}
+.purchase__img {
+  img {
+    border-radius: 10px;
+  }
+}
