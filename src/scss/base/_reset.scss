@@ -3,6 +3,14 @@
   padding: 0px;
   margin: 0px;
   border: none;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 *,
@@ -93,7 +101,7 @@ input:focus,
 input:active,
 button:focus,
 button:active {
-  outline: none;
+  outline: none !important;
 }
 
 button::-moz-focus-inner {
@@ -107,29 +115,4 @@ label {
 
 legend {
   display: block;
-}
-
-a.active.focus,
-a.active:focus,
-a.focus,
-a:active.focus,
-a:active:focus,
-a:focus,
-button.active.focus,
-button.active:focus,
-button.focus,
-button:active.focus,
-button:active:focus,
-button:focus,
-.btn.active.focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn:active:focus,
-.btn:focus {
-  outline: 0 !important;
-  outline-color: transparent !important;
-  outline-width: 0 !important;
-  outline-style: none !important;
-  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }

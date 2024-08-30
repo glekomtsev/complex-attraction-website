@@ -1,40 +1,84 @@
 .none {
-	display: none !important;
+  display: none !important;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .no-scroll {
-	overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 
 .text-right {
-	text-align: right;
+  text-align: right;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .d-flex {
-	display: flex;
+  display: flex;
 }
 
 .flex-center {
-	justify-content: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  background: #08bbb7;
+  border-radius: 40px;
+  font-family: "Didact Gothic", sans-serif;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    color: #000000;
+  }
+  &:focus {
+    color: #000000;
+  }
+  &:active {
+    color: #000000;
+  }
+
+  /* Псевдоэлемент для внутренней границы */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px; /* Сдвигаем вниз, чтобы создать эффект внутренней границы */
+    left: 3px; /* Сдвигаем вправо, чтобы создать эффект внутренней границы */
+    right: 3px; /* Сдвигаем влево, чтобы создать эффект внутренней границы */
+    bottom: 3px; /* Сдвигаем вверх, чтобы создать эффект внутренней границы */
+    border: 2px dashed white; /* Устанавливаем белую границу */
+    border-radius: 38px; /* Радиус меньше, чем у основной кнопки */
+    opacity: 1; /* Граница не видна по умолчанию */
+    transition: opacity 0.2s ease-in; /* Плавное появление границы */
+  }
+
+  &:hover::before {
+    opacity: 0; /* Показываем границу при наведении */
+  }
+  &:focus::before {
+    opacity: 0; /* Показываем границу при наведении */
+  }
+  &:active::before {
+    opacity: 0; /* Показываем границу при наведении */
+  }
 }

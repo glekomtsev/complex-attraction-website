@@ -42,38 +42,9 @@ pre.code {
 }
 
 
-.btn{
-	display: inline-block;
-	position: relative;
-	background: #08bbb7;
-	border-radius: 40px;
-	font-family: "Didact Gothic", sans-serif;
-	transition: all 0.2s ease-in;
-	cursor: pointer;
 
-	&:hover {
-        // background: #37d3d0; /* Изменение фона при наведении */
-		color: #000000;
-    }
 
-    /* Псевдоэлемент для внутренней границы */
-    &::before {
-        content: "";
-        position: absolute;
-        top: 3px; /* Сдвигаем вниз, чтобы создать эффект внутренней границы */
-        left: 3px; /* Сдвигаем вправо, чтобы создать эффект внутренней границы */
-        right: 3px; /* Сдвигаем влево, чтобы создать эффект внутренней границы */
-        bottom: 3px; /* Сдвигаем вверх, чтобы создать эффект внутренней границы */
-        border: 2px dashed white; /* Устанавливаем белую границу */
-        border-radius: 38px; /* Радиус меньше, чем у основной кнопки */
-        opacity: 1; /* Граница не видна по умолчанию */
-        transition: opacity 0.2s ease-in; /* Плавное появление границы */
-    }
 
-    &:hover::before {
-        opacity: 0; /* Показываем границу при наведении */		
-    }	
-}
 
 
 
