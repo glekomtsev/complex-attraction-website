@@ -27,29 +27,21 @@ import Inputmask from "inputmask";
 
 document.addEventListener("DOMContentLoaded", function() {
   //Header
-  // Получаем элемент header
   const header = document.getElementById("header");
-  // Устанавливаем позицию, после которой заголовок должен закрепиться
-  const stickyOffset = 200; // Например, после прокрутки на 200 пикселей
-  // Функция для добавления/удаления класса "fixed"
+  const stickyOffset = 200;
+
   function handleScroll() {
     if (window.scrollY > stickyOffset) {
-      header.style.position = "fixed";
-      header.style.background = "rgba(255, 255, 255, 0.9)";
-      header.style.padding = "20px 0px";
-      header.style.boxShadow = "0px 4px 4px 0px rgba(0, 0, 0, 0.25)";
-      header.style.backdropFilter = "blur(25px)";
+      header.classList.add("header-fixed");
+      header.classList.remove("header");
     } else {
-      header.style.position = "absolute";
-      header.style.background =
-        "linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%)";
-      header.style.padding = "43px 0 215px";
-      header.style.boxShadow = "none";
-      header.style.backdropFilter = "none";
+      header.classList.add("header");
+      header.classList.remove("header-fixed");
     }
   }
-  // Добавляем обработчик события прокрутки
+
   window.addEventListener("scroll", handleScroll);
+  handleScroll();
 
   //Title main
   const title = document.querySelector(".main__title");
