@@ -5,6 +5,12 @@
   width: 100%;
   z-index: 1000; /* значение z-index должно быть выше, чем у слайдера */
   background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+
+  padding: 43px 0 215px;
+
+  @include size-960 {
+    padding: 28px 0 100px;
+  }
 }
 .container {
 }
@@ -12,11 +18,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 43px 0 215px;
-
-  @include size-960 {
-    padding: 28px 0 100px;
-  }
 }
 .header__logo {
 }
@@ -115,7 +116,7 @@
 
   @include size-1440 {
     display: block;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
   }
 }
