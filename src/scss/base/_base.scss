@@ -9,6 +9,10 @@
 html {
 	scroll-behavior: smooth;
 	background-color: rgb(39, 39, 39);
+	 scroll-behavior: smooth;
+}
+.anchor-section {
+	scroll-margin-top: 66px; /* отступ в 50px */
 }
 
 body {
