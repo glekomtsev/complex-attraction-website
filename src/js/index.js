@@ -28,7 +28,7 @@ import Inputmask from "inputmask";
 document.addEventListener("DOMContentLoaded", function() {
   //Header
   const header = document.getElementById("header");
-  const stickyOffset = 200;
+  const stickyOffset = 100;
 
   function handleScroll() {
     if (window.scrollY > stickyOffset) {
