@@ -1,0 +1,51 @@
+<section id="modal-plan" class="build-plan">
+  <div class="container">
+    <div class="build-plan__container">
+
+      <div class="build-plan__title">
+        <h3>Выбрать квартиру</h3>
+        <div class="close">
+          <img src="./../../img/close.svg" alt="close">
+        </div>
+      </div>
+      <div class="build-plan__details">
+        <div class="build-plan__floors">
+          <p>Этаж</p>
+          <select class="drop-down-menu" id="floors" name="floors">
+            <option value="1">1 этаж</option>
+            <option value="2">2 этаж</option>
+            <option value="3">3 этаж</option>
+            <option value="4">4 этаж</option>
+            <option value="5">5 этаж</option>
+            <option value="6">6 этаж</option>
+            <option value="7">7 этаж</option>
+            <option value="8">8 этаж</option>
+            <option value="9">9 этаж</option>
+            <option value="10">10 этаж</option>
+            <option value="11">11 этаж</option>
+            <option value="12">12 этаж</option>
+            <option value="13">13 этаж</option>
+            <option value="14">14 этаж</option>
+            <option value="15">15 этаж</option>
+            <option value="16">16 этаж</option>
+          </select>
+        </div>
+        <div class="build-plan__rooms">
+          <p>Тип помещения</p>
+          <select class="drop-down-menu" id="rooms" name="rooms">
+            <option value="1">1-комн. кв</option>
+            <option value="2">2-комн. кв</option>
+            <option value="3">3-комн. кв</option>
+            <option value="4">4-комн. кв</option>
+            <option value="5">Офисы</option>
+            <option value="6">Кладовки</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="build-plan__list">
+        @@loop('./../cards/item-plan.html', './data/item-plan.json')
+      </div>
+    </div>
+  </div>
+</section>

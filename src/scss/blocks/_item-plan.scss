@@ -1,0 +1,46 @@
+.item-plan {
+  padding: 15px 15px;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  h4 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #65717c;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  @include size-960 {
+    padding: 5px 5px;
+  }
+}
+.item-plan__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.item-plan__item {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+
+  p {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    color: #999;
+    margin: 0;
+  }
+
+  span {
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    margin-top: 5px;
+  }
+}

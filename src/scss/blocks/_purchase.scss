@@ -48,8 +48,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
     & > :nth-child(5) {
-      grid-column: span 2; /* Элемент занимает две колонки */
-      // justify-self: center; /* Центрирование внутри занятого пространства */
+      grid-column: span 2;
     }
   }
 

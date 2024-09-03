@@ -1,0 +1,72 @@
+[
+  {
+    "img": "03",
+    "price": "5 100 000",
+    "floore": 2,
+    "rooms": 2,
+    "area": "39.5"
+  },
+  {
+    "img": "07",
+    "price": "5 200 000",
+    "floore": 5,
+    "rooms": 3,
+    "area": "41.0"
+  },
+  {
+    "img": "10",
+    "price": "4 900 000",
+    "floore": 8,
+    "rooms": 1,
+    "area": "40.2"
+  },
+  {
+    "img": "02",
+    "price": "5 000 000",
+    "floore": 1,
+    "rooms": 4,
+    "area": "39.8"
+  },
+  {
+    "img": "08",
+    "price": "5 300 000",
+    "floore": 12,
+    "rooms": 2,
+    "area": "40.0"
+  },
+  {
+    "img": "06",
+    "price": "4 850 000",
+    "floore": 7,
+    "rooms": 1,
+    "area": "40.1"
+  },
+  {
+    "img": "05",
+    "price": "5 150 000",
+    "floore": 14,
+    "rooms": 3,
+    "area": "40.0"
+  },
+  {
+    "img": "01",
+    "price": "4 950 000",
+    "floore": 3,
+    "rooms": 2,
+    "area": "39.9"
+  },
+  {
+    "img": "09",
+    "price": "5 250 000",
+    "floore": 10,
+    "rooms": 4,
+    "area": "40.3"
+  },
+  {
+    "img": "04",
+    "price": "4 990 000",
+    "floore": 6,
+    "rooms": 1,
+    "area": "39.7"
+  }
+]

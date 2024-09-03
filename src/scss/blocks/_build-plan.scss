@@ -1,0 +1,165 @@
+#modal-plan {
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: auto;
+
+  z-index: 1001;
+  padding: 20px 0;
+}
+
+.container {
+}
+.build-plan__container {
+}
+.build-plan__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+
+  h3 {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000;
+    text-align: left;
+  }
+
+  @include size-1080 {
+    h3 {
+      font-size: 38px;
+    }
+  }
+  @include size-780 {
+    margin-bottom: 20px;
+    h3 {
+      font-size: 28px;
+    }
+  }
+  @include size-360 {
+    margin-bottom: 10px;
+    h3 {
+      font-size: 20px;
+    }
+  }
+}
+
+.close {
+  height: 70px;
+  width: 70px;
+
+  @include size-1440 {
+    height: 50px;
+    width: 50px;
+  }
+
+  @include size-640 {
+    height: 30px;
+    width: 30px;
+  }
+}
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
+.build-plan__details {
+  display: flex;
+  column-gap: 30px;
+  margin-bottom: 20px;
+
+  p {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+.build-plan__floors {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.build-plan__rooms {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.drop-down-menu {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  line-height: 120%;
+  width: 150px; /* Ширина выпадающего списка */
+  padding: 10px; /* Внутренний отступ */
+  font-size: 16px; /* Размер шрифта */
+  border: 1px solid #ccc; /* Граница */
+  border-radius: 5px; /* Скругленные углы */
+  background-color: #f9f9f9; /* Цвет фона */
+  color: #000; /* Цвет текста */
+  appearance: none; /* Убирает стандартную стрелку браузера */
+  -webkit-appearance: none; /* Для браузеров на базе WebKit */
+  -moz-appearance: none; /* Для Firefox */
+  background-image: url("./../../img/plan/Vector-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+
+  // Стили для элементов option вне вложенности
+  option {
+    padding: 10px; /* Внутренний отступ */
+    background-color: #ffffff; /* Цвет фона */
+    color: #333; /* Цвет текста */
+  }
+
+  // Стили для выбранного элемента
+  option:checked {
+    background-color: var(--accent);
+    color: #fff;
+  }
+
+  @include size-480 {
+    width: 120px; /* Ширина выпадающего списка */
+    padding: 8px; /* Внутренний отступ */
+    font-size: 12px; /* Размер шрифта */
+  }
+}
+
+/* Стили при наведении курсора мыши */
+.drop-down-menu:hover {
+  border-color: var(--accent);
+}
+
+/* Стили при фокусировке (когда элемент активен) */
+.drop-down-menu:focus {
+  border-color: var(--accent); /* Цвет границы при фокусе */
+  outline: none; /* Убирает стандартное обрамление при фокусе */
+}
+.build-plan__all-plan {
+}
+.build-plan__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+
+  @include size-1440 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include size-960 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include size-640 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  @include size-360 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

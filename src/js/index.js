@@ -141,3 +141,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 }); // Закрывающая скобка для функции DOMContentLoaded
+
+// Получите элементы модального окна и кнопок
+const modal = document.getElementById("modal-plan");
+const btn = document.getElementById("open-modal-plan");
+const span = document.getElementsByClassName("close")[0];
+
+// Откройте модальное окно при нажатии на кнопку
+btn.onclick = function() {
+  modal.style.display = "block";
+};
+
+// Закройте модальное окно при нажатии на крестик
+span.onclick = function() {
+  modal.style.display = "none";
+};
+
+// Закройте модальное окно, если пользователь нажимает вне его содержимого
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
