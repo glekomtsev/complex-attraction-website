@@ -49,13 +49,8 @@
   cursor: pointer;
 
   &:hover {
-    color: #000000;
-  }
-  &:focus {
-    color: #000000;
-  }
-  &:active {
-    color: #000000;
+    color: #fff;
+    background: #1bcfcc;
   }
 
   /* Псевдоэлемент для внутренней границы */
@@ -73,12 +68,6 @@
   }
 
   &:hover::before {
-    opacity: 0; /* Показываем границу при наведении */
-  }
-  &:focus::before {
-    opacity: 0; /* Показываем границу при наведении */
-  }
-  &:active::before {
     opacity: 0; /* Показываем границу при наведении */
   }
 }

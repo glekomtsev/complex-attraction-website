@@ -125,7 +125,7 @@
 			<div class="main__info">
 				<h1 class="main__title">Притяжение</h1>
 				<h2 class="main__subtitle">Территория новых перспектив</h2>
-				<button id="open-modal-plan" class="main__btn btn">Выбрать квартиру</button>
+				<button id="" class="main__btn btn open-modal-plan">Выбрать квартиру</button>
 				<div class="main__text">
 					<p>Срок строительства: 4 кв.&#160;2023&#160;&#8212; 1 кв.&#160;2026&#160;г.</p>
 				</div>
@@ -574,7 +574,7 @@
 							<div class="swiper-button-next"></div>
 						</div>
 					</div>
-					<div class="layouts__btn btn">получить планировки и&#160;цены</div>
+					<button id="downloadBtn" class="layouts__btn btn">получить планировки и&#160;цены</button>
 				</div>
 			</div>
 		</section>
@@ -583,15 +583,15 @@
 				<div class="listings__container">
 					<div class="listings__apartments listings__item">
 						<h3 class="listings__title">Выбрать Квартиру</h3>
-						<button class="listings__btn btn">Открыть шахматку</button>
+						<button id="open-modal-plan" class="listings__btn btn open-modal-plan">Выбрать</button>
 					</div>
 					<div class="listings__offices listings__item">
 						<h3 class="listings__title">Выбрать Офис</h3>
-						<button class="listings__btn btn">Открыть шахматку</button>
+						<button id="open-modal-plan" class="listings__btn btn open-modal-plan">Выбрать</button>
 					</div>
 					<div class="listings__storage listings__item">
 						<h3 class="listings__title">Выбрать кладовую</h3>
-						<button class="listings__btn btn">Открыть шахматку</button>
+						<button id="" class="listings__btn btn open-modal-plan">Выбрать</button>
 					</div>
 				</div>
 			</div>
@@ -717,7 +717,15 @@
 							<div class="purchase__text-input-wrapper">
 								<input class="purchase__text-input" type="text" id="phone" placeholder="+7 (___) __-__-___" />
 							</div>
-							<button class="purchase__text-btn btn">позвоните мне</button>
+							<button id="call-back-button" class="purchase__text-btn btn">позвоните мне</button>
+							<div id="purchase-modal" class="purchase-modal">
+								<div class="purchase-modal__modal-content">
+									<div>Заявка оставлена, мы&#160;вам перезвоним!</div>
+									<button class="purchase-close" id="purchase-close-modal">
+										<img src="./img/close.svg" alt="close" />
+									</button>
+								</div>
+							</div>
 							<p class="purchase__text-note">
 								Нажимая кнопку &#171;Позвоните мне&#187; вы&#160;даете согласение на&#160;обработку персональных данных в&#160;соответствии с&#160;политикой
 								конфиденциальности.
@@ -837,7 +845,7 @@
 			<div class="container">
 				<div class="build-plan__container">
 					<div class="build-plan__title">
-						<h3>Выбрать квартиру</h3>
+						<h3>Выбрать недвижимость</h3>
 						<div class="close">
 							<img src="./img/close.svg" alt="close" />
 						</div>
@@ -1085,6 +1093,90 @@
 								<div class="item-plan__item">
 									<p>Площадь</p>
 									<span>39.7 кв.м</span>
+								</div>
+							</div> </a
+						><a href="#!" class="item-plan">
+							<picture>
+								<source srcset="./img/plan/plan-10.webp 1x, ./img/plan/plan-10@2x.webp 2x" type="image/webp" />
+								<source srcset="./img/plan/plan-10.png 1x, ./img/plan/plan-10@2x.png 2x" type="image/png" />
+								<img src="./img/plan/plan-10.png" srcset="./img/plan/plan-10@2x" alt="item" />
+							</picture>
+							<h4>4 900 000&#160;руб.</h4>
+							<div class="item-plan__info">
+								<div class="item-plan__item">
+									<p>Этаж</p>
+									<span>8</span>
+								</div>
+								<div class="item-plan__item">
+									<p>Комнаты</p>
+									<span>1</span>
+								</div>
+								<div class="item-plan__item">
+									<p>Площадь</p>
+									<span>40.2 кв.м</span>
+								</div>
+							</div> </a
+						><a href="#!" class="item-plan">
+							<picture>
+								<source srcset="./img/plan/plan-02.webp 1x, ./img/plan/plan-02@2x.webp 2x" type="image/webp" />
+								<source srcset="./img/plan/plan-02.png 1x, ./img/plan/plan-02@2x.png 2x" type="image/png" />
+								<img src="./img/plan/plan-02.png" srcset="./img/plan/plan-02@2x" alt="item" />
+							</picture>
+							<h4>5 000 000&#160;руб.</h4>
+							<div class="item-plan__info">
+								<div class="item-plan__item">
+									<p>Этаж</p>
+									<span>1</span>
+								</div>
+								<div class="item-plan__item">
+									<p>Комнаты</p>
+									<span>4</span>
+								</div>
+								<div class="item-plan__item">
+									<p>Площадь</p>
+									<span>39.8 кв.м</span>
+								</div>
+							</div> </a
+						><a href="#!" class="item-plan">
+							<picture>
+								<source srcset="./img/plan/plan-10.webp 1x, ./img/plan/plan-10@2x.webp 2x" type="image/webp" />
+								<source srcset="./img/plan/plan-10.png 1x, ./img/plan/plan-10@2x.png 2x" type="image/png" />
+								<img src="./img/plan/plan-10.png" srcset="./img/plan/plan-10@2x" alt="item" />
+							</picture>
+							<h4>4 900 000&#160;руб.</h4>
+							<div class="item-plan__info">
+								<div class="item-plan__item">
+									<p>Этаж</p>
+									<span>8</span>
+								</div>
+								<div class="item-plan__item">
+									<p>Комнаты</p>
+									<span>1</span>
+								</div>
+								<div class="item-plan__item">
+									<p>Площадь</p>
+									<span>40.2 кв.м</span>
+								</div>
+							</div> </a
+						><a href="#!" class="item-plan">
+							<picture>
+								<source srcset="./img/plan/plan-05.webp 1x, ./img/plan/plan-05@2x.webp 2x" type="image/webp" />
+								<source srcset="./img/plan/plan-05.png 1x, ./img/plan/plan-05@2x.png 2x" type="image/png" />
+								<img src="./img/plan/plan-05.png" srcset="./img/plan/plan-05@2x" alt="item" />
+							</picture>
+							<h4>5 421 000&#160;руб.</h4>
+							<div class="item-plan__info">
+								<div class="item-plan__item">
+									<p>Этаж</p>
+									<span>2</span>
+								</div>
+								<div class="item-plan__item">
+									<p>Комнаты</p>
+									<span>3</span>
+								</div>
+								<div class="item-plan__item">
+									<p>Площадь</p>
+									<span>46.8 кв.м</span>
 								</div>
 							</div>
 						</a>

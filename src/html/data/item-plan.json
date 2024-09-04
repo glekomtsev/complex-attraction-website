@@ -68,5 +68,33 @@
     "floore": 6,
     "rooms": 1,
     "area": "39.7"
+  },
+  {
+    "img": "10",
+    "price": "4 900 000",
+    "floore": 8,
+    "rooms": 1,
+    "area": "40.2"
+  },
+  {
+    "img": "02",
+    "price": "5 000 000",
+    "floore": 1,
+    "rooms": 4,
+    "area": "39.8"
+  },
+  {
+    "img": "10",
+    "price": "4 900 000",
+    "floore": 8,
+    "rooms": 1,
+    "area": "40.2"
+  },
+  {
+    "img": "05",
+    "price": "5 421 000",
+    "floore": 2,
+    "rooms": 3,
+    "area": "46.8"
   }
 ]

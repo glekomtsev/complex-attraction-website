@@ -34,7 +34,15 @@
                     <div class="purchase__text-input-wrapper">
                         <input class="purchase__text-input" type="text" id="phone" placeholder="+7 (___) __-__-___">
                     </div>
-                    <button class="purchase__text-btn btn">позвоните мне</button>
+                    <button id="call-back-button" class="purchase__text-btn btn">позвоните мне</button>
+                    <div id="purchase-modal" class="purchase-modal">
+                        <div class="purchase-modal__modal-content">
+                            <div>Заявка оставлена, мы вам перезвоним!</div>
+                            <button class="purchase-close" id="purchase-close-modal">
+                                <img src="./../../img/close.svg" alt="close">
+                            </button>
+                        </div>
+                    </div>
                     <p class="purchase__text-note">Нажимая кнопку «Позвоните мне» вы даете согласение на обработку
                         персональных данных в соответствии с политикой конфиденциальности.</p>
                 </div>

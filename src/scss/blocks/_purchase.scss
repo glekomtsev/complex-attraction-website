@@ -263,6 +263,76 @@
     font-size: 14px;
   }
 }
+
+.purchase-modal {
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.purchase-modal__modal-content {
+  position: absolute; /* Расположить относительно родителя */
+  top: 50%; /* Переместить на середину по вертикали */
+  left: 50%; /* Переместить на середину по горизонтали */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Смещение назад на половину ширины и высоты элемента */
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  color: #000;
+  background-color: #fff;
+  padding: 20px 50px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  border-radius: 10px;
+
+  @include size-1440 {
+    font-size: 25px;
+  }
+
+  @include size-960 {
+    font-size: 22px;
+  }
+  @include size-780 {
+    font-size: 18px;
+  }
+  @include size-480 {
+    font-size: 16px;
+    column-gap: 10px;
+    padding: 10px 20px;
+  }
+}
+
+.purchase-close {
+  height: 70px;
+  width: 70px;
+
+  @include size-1440 {
+    height: 50px;
+    width: 50px;
+  }
+
+  @include size-640 {
+    height: 30px;
+    width: 30px;
+  }
+}
+
 .purchase__text-note {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;

@@ -142,24 +142,78 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 }); // Закрывающая скобка для функции DOMContentLoaded
 
+//plan
 // Получите элементы модального окна и кнопок
-const modal = document.getElementById("modal-plan");
-const btn = document.getElementById("open-modal-plan");
+const modal = document.querySelector(".build-plan");
+const btns = document.querySelectorAll(".open-modal-plan");
 const span = document.getElementsByClassName("close")[0];
 
-// Откройте модальное окно при нажатии на кнопку
-btn.onclick = function() {
-  modal.style.display = "block";
-};
+// Пройтись по всем кнопкам и добавить событие клика
+btns.forEach(function(btn) {
+  btn.onclick = function() {
+    modal.style.display = "block"; // Показать модальное окно
+    setTimeout(() => {
+      modal.classList.add("modal-show"); // Добавить класс для анимации
+    }, 10); // Небольшая задержка для плавного показа
+  };
+});
 
-// Закройте модальное окно при нажатии на крестик
-span.onclick = function() {
-  modal.style.display = "none";
-};
+// Закрыть модальное окно при нажатии на крестик
+if (span) {
+  span.onclick = function() {
+    modal.classList.remove("modal-show");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 400); // Время должно совпадать с переходом CSS
+  };
+}
 
-// Закройте модальное окно, если пользователь нажимает вне его содержимого
+// Закрыть модальное окно, если пользователь нажимает вне его содержимого
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target === modal) {
+    modal.classList.remove("modal-show");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 400); // Время должно совпадать с переходом CSS
   }
 };
+
+//скачивание файла
+document.getElementById("downloadBtn").addEventListener("click", function() {
+  var userConfirmed = confirm("Скачать файл?");
+
+  if (userConfirmed) {
+    alert("Файл загружается...");
+  } else {
+    console.log("Скачивание отменено.");
+  }
+});
+
+//purchase modal
+const callBackButton = document.getElementById("call-back-button");
+const purchaseModal = document.getElementById("purchase-modal");
+const closeModalButton = document.getElementById("purchase-close-modal");
+
+callBackButton.addEventListener("click", () => {
+  const phoneInput = document.getElementById("phone").value;
+
+  // Проверка на заполненность поля номера телефона
+  if (phoneInput.trim() === "") {
+    alert("Пожалуйста, введите номер телефона.");
+  } else {
+    // Показать модальное окно
+    purchaseModal.style.display = "block";
+  }
+});
+
+closeModalButton.addEventListener("click", () => {
+  // Закрыть модальное окно
+  purchaseModal.style.display = "none";
+});
+
+// Закрытие модального окна при клике вне его области
+window.addEventListener("click", (event) => {
+  if (event.target === purchaseModal) {
+    purchaseModal.style.display = "none";
+  }
+});
